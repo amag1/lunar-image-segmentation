@@ -37,6 +37,14 @@ def pixel_difference_percentage(image1, image2):
     if image1.shape != image2.shape:
         raise ValueError("Images must have the same dimensions")
 
+    # both images must be binary: only contain 0s and 255s
+    if not (set(image1.flatten()) <= {0, 255}):
+        # threshold the images to binary
+        _, image1 = cv2.threshold(image1, 10, 255, cv2.THRESH_BINARY)
+    if not (set(image2.flatten()) <= {0, 255}):
+        # threshold the images to binary
+        _, image2 = cv2.threshold(image2, 10, 255, cv2.THRESH_BINARY)
+
     # Calculate the absolute difference
     imgDiff = cv2.absdiff(image1, image2)
 
