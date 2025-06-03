@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-def evaluate_dark_image(image):
+def segmentate_dark_image(image):
     # 1. Aumento de brillo/contraste
     bright = cv2.convertScaleAbs(image, alpha=1.2, beta=10)
 
