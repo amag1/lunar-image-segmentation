@@ -1,0 +1,5 @@
+Class,Min,Max,Average,Median
+flat,1,87,30.52,31.0
+dark,0,92,35.22,33.0
+bright,1,84,31.94,32.0
+Overall,0,92,32.44,32.0
