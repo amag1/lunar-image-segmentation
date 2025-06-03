@@ -12,8 +12,8 @@ def eval(image_number, transform):
     :return: The loss value
     """
     # Read the image
-    image_path = f"./dataset/images/render/render{image_number}.png"
-    mask_path = f"./dataset/images/ground/ground{image_number}.png"
+    image_path = f"dataset/images/render/render{image_number}.png"
+    mask_path = f"dataset/images/ground/ground{image_number}.png"
 
     image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
 
@@ -33,4 +33,4 @@ def eval(image_number, transform):
     # Calculate the loss (for example, mean squared error)
     loss = pixel_difference_percentage(transformed_image, mask)
 
-    return loss
+    return mask, loss
