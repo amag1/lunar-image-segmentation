@@ -1,6 +1,6 @@
-from segment_flat_image import segment_flat_image
-from segment_dark_image import segment_dark_image
-from segment_bright_image import segment_bright_image
+from pipelines.segment_flat_image import segment_flat_image
+from pipelines.segment_dark_image import segment_dark_image
+from pipelines.segment_bright_image import segment_bright_image
 from eval import eval
 
 from concurrent.futures import ProcessPoolExecutor, as_completed
