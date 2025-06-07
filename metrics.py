@@ -80,6 +80,8 @@ def save_histogram(data, name):
     plt.title(f"Distribución de la función de pérdida (precisión) - {name}")
     plt.xlabel("Precisión (%)")
     plt.ylabel("Frecuencia")
+
+    plt.xticks(np.arange(0, 101, 10))
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, f"loss_distribution_{name}.png"))
     plt.close()
