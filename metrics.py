@@ -23,8 +23,9 @@ for class_name in os.listdir(result_dir):
         m = loss_pattern.search(fname)
         if m:
             loss = int(m.group(1))
-            losses.append(loss)
-            all_losses.append(loss)
+            precision = 100 - loss
+            losses.append(precision)
+            all_losses.append(precision)
 
     losses_per_class[class_name] = np.array(losses)
 
@@ -76,9 +77,9 @@ def save_histogram(data, name):
     bins = freedman_diaconis_bins(data)
     plt.figure()
     plt.hist(data, bins=bins, alpha=0.7)
-    plt.title(f"Loss Distribution - {name}")
-    plt.xlabel("Loss")
-    plt.ylabel("Frequency")
+    plt.title(f"Distribución de la función de pérdida (precisión) - {name}")
+    plt.xlabel("Precisión (%)")
+    plt.ylabel("Frecuencia")
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, f"loss_distribution_{name}.png"))
     plt.close()
@@ -87,4 +88,4 @@ def save_histogram(data, name):
 for cls, vals in losses_per_class.items():
     save_histogram(vals, cls)
 
-save_histogram(all_losses_arr, "Overall")
+save_histogram(all_losses_arr, "Total")

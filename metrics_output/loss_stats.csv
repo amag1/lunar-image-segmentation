@@ -1,5 +1,5 @@
 Class,Min,Max,Average,Median
-flat,1,87,30.52,31.0
-dark,0,92,35.22,33.0
-bright,1,84,31.94,32.0
-Overall,0,92,32.44,32.0
+Img brillantes,16,99,68.06,68.0
+Img planas,13,99,69.48,69.0
+Img oscuras,8,100,64.78,67.0
+Overall,8,100,67.56,68.0
