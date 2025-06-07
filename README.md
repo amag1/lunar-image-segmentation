@@ -54,6 +54,26 @@ python3 main.py
 
 Esto ejecutará el flujo de trabajo completo y generará las imágenes segmentadas en la carpeta `dataset/images/resulting_masks`.
 
+## Formato de los resultados
+Como se mencionó anteriormente, el script solo guarda la mejor máscara para cada imagen. Dentro del directorio `dataset/images/resulting_masks/` se podrán encontrar tres subdirectorios que corresponden a cada uno de los pipelines de segmentación implementados. Cada subdirectorio contendrá las imágenes segmentadas generadas por el pipeline correspondiente, con el siguiente formato:
+
+```
+dataset/images/resulting_masks/
+├── bright
+│   ├── result0001-lossXX.png
+|   ├── result0002-lossXX.png
+├── dark
+│   ├── result0001-lossXX.png
+|   ├── result0002-lossXX.png
+├── red
+│   ├── result0001-lossXX.png
+|   ├── result0002-lossXX.png
+```
+
+Donde `XX` representa el valor de la pérdida obtenido para cada imagen segmentada. El script guarda la mejor máscara para cada imagen, es decir, aquella que tiene el menor valor de pérdida.
+
+Para más información sobre los pipelines de segmentación utilizados, consultar el informe final del proyecto, que los explica en detalle.
+
 ## Evaluación de las métricas
 Para evaluar las métricas de las imágenes segmentadas, se debe ejecutar el script `metrics.py` una vez que se hayan generado las imágenes segmentadas. Este script calculará la precisión de las imágenes segmentadas y producirá histogramas de las métricas obtenidas. Para ejecutarlo, se puede utilizar el siguiente comando:
 
