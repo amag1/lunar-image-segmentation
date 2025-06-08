@@ -6,7 +6,7 @@
 
 ## Importación del conjunto de datos
 Por motivos de espacio, el conjunto de datos no se incluye en el repositorio. Para poder ejecutar el código es necesario descargarlo desde Kaggle a través del siguiente enlace: [Lunar Renders Dataset](https://www.kaggle.com/datasets/romainpessia/artificial-lunar-rocky-landscape-dataset).
-También se ofrece un enlace alternativo para descargar el conjunto de datos desde Google Drive: [Lunar Renders Dataset - Google Drive](https://drive.google.com/file/d/1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q/view?usp=sharing).
+También se ofrece un enlace alternativo para descargar el conjunto de datos desde Google Drive: [Lunar Renders Dataset - Google Drive](https://drive.google.com/drive/folders/1cNMRqZToX1X4S8pkTGWw2KEw8lR-ijIx?usp=sharing).
 
 Una vez descargado el conjunto de datos, es necesario descomprimirlo en la carpeta `dataset/` del proyecto. Se espera que la estructura de carpetas sea la siguiente:
 
@@ -65,7 +65,7 @@ dataset/images/resulting_masks/
 ├── dark
 │   ├── result0001-lossXX.png
 |   ├── result0002-lossXX.png
-├── red
+├── flat
 │   ├── result0001-lossXX.png
 |   ├── result0002-lossXX.png
 ```
