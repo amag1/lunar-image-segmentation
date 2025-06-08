@@ -16,7 +16,7 @@ dataset
 │   ├── clean
 │   |   ├── clean0001.png
 │   ├── ground
-│   |   ├── render0001.png
+│   |   ├── ground0001.png
 │   └── render
 │       ├── render0001.png
 ```
@@ -37,6 +37,7 @@ En la raíz del proyecto se encuentran los siguientes archivos y carpetas:
 |`dataset/`|Carpeta que contiene el conjunto de datos.|
 |`pipelines/`|Carpeta que contiene los pipelines de segmentación.|
 |`notebooks/`|Carpeta que contiene los notebooks de prueba y experimentación.|
+|`metrics_outputs/`|Carpeta que contiene los histogramas de las métricas obtenidas, junto con un CSV resumen de las mismas|
 |`requirements.txt`|Archivo que contiene las dependencias del proyecto.|
 
 ## Ejecución del proyecto
